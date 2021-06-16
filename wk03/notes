@@ -1,0 +1,26 @@
+SIGNED INTEGERS 
+- first bit tells us the sign
+- 0: positive
+- 1: negative
+
+TWOS COMPLEMENT 
+- mathematical operation 
+- gets the negative representation of a value in binary
+Steps:
+1. Flip all the bits (negate)
+2. Add 1
+
+CREATING MASKS
+1. starting at 1, left shifting as needed 
+0000...0001 -> 1 
+0000...0010
+0000...0100 
+int mask = 1;
+every iteration -> mask = mask << 1;
+
+0001...0000
+int mask = 1 << x;
+
+2. Use hexadecimal
+mask = 0101 1010
+     = 0x5A
