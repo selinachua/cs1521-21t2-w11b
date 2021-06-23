@@ -7,7 +7,8 @@ int main(void) {
 
     // it evaluates the condition, 
     // ! x >= 46340, it branches to else
-    // x < 46340, branch to else 
+    // x < 46340, branch to else
+    // x = 46340; 
     if (x >= 46340) {
         printf("square too big for 32 bits\n");
     } else {
@@ -17,3 +18,11 @@ int main(void) {
     
     return 0;
 }
+
+if (x < 46340) goto else 
+    printf(...)
+    goto endif
+else 
+    y = x * x;
+    printf(...)
+endif

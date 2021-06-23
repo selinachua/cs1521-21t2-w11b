@@ -8,7 +8,15 @@ int main(void) {
 }
 
 // WHILE VERSION
-
+int main(void) {
+    int x = 24;
+    while (x < 42) {
+        printf("%d", x);
+        printf("\n");
+        x += 3;
+    }
+    return 0;
+}
 
 
 
@@ -28,4 +36,16 @@ int main(void) {
     end:
 
     return 0;
+}
+
+
+int i = 0;
+while (i < ...) {
+    int j = 0;
+    while (j < ???) {
+        !!!!!!
+        j++;
+    }
+
+    i++;
 }
