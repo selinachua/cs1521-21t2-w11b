@@ -1,21 +1,9 @@
 # Just an example of what a MIPS program looks like.
 
-# There are 2 sections: one is DATA
-# Contains all data we want at assembly time
-	.data
-
-numbers:
-	.space	40		# int numbers[10];
-string0:
-	.asciiz	"Enter a number: "
-string1:
-	.asciiz	"Reverse order:\n"
-
 # And the other is TEXT
 # Contains our instructions and actual logic
-	.text
 main:
-	li	$t0, 0		# count = 0
+	li	$t0, 0			# count = 0
 
 read:
 	bge	$t0, 10, print	# while (count < 10) {
@@ -23,9 +11,9 @@ read:
 	li	$v0, 4
 	syscall
 
-	li	$v0, 5		# scanf("%d", &numbers[count]);
+	li	$v0, 5			# scanf("%d", &numbers[count]);
 	syscall             
-	mul	$t1, $t0, 4	# calculate &numbers[count]
+	mul	$t1, $t0, 4		# calculate &numbers[count]
 	la	$t2, numbers    
 	add	$t1, $t1, $t2   
 	sw	$v0, ($t1)	# store entered number in array
@@ -58,3 +46,16 @@ next:
 
 done:
 	jr	$31
+
+# There are 2 sections: one is DATA
+# Contains all data we want at assembly time
+	.data
+
+numbers:
+	.space	40		# int numbers[10];
+string0:
+	.asciiz	"Enter a number: "
+string1:
+	.asciiz	"Reverse order:\n"
+num:
+	.word 	400

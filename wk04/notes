@@ -1,25 +1,72 @@
 ##### MIPS #####
-Registers
-$zero   ->
-$v0, v1 ->
-$a0-a3  ->
-$t?     ->
-$s?     ->
-$ra     -> 
+Registers -> basically kind of variables 
+          -> used to hold values 
+
+// $a0 -> x
+// $a1 -> y
+// $a2 -> z
+int add(int x, int y, int z) {
+    int sum = x + y;
+    return sum; // $v0 = sum
+}
+
+32 registers
+$zero   -> always has the value of 0
+$v0, v1 -> function return values 
+$a0-a3  -> function arguments 
+$t?     -> temporary registers 
+$s?     -> safe registers 
+$ra     -> return address // return 0;
 
 Instructions
 MATH INSTRUCTIONS 
-$t2 = $t0 + $t1
-add     $t2, $t0, $t1
+y = x + x
+$t1 = $t0 + $t0
+add     $t1, $t0, $t0 
+
 
 LOADING INSTRUCTIONS 
-1. Loading an immediate value (1, 2, 3, 4, 'a')
-li  $t0, 'a'
+loading something into register -> put a value into the register 
 
-2. Loading from an address 
-la  $t0, prompt
-lw  $t0, var
-lb  $t0, ch
+1. Loading an immediate value (1, 2, 3, 4, 'a', '\n')
+$t0 = 100
+li      $t0, 100 
+
+$t1 = '\n'
+li      $t1, '\n'
+
+
+2. Loading from an address (data section)
+la -> load address 
+   -> mainly used for loading an array into a register
+   -> array int *arr -> just a pointer to the beginning of the array 
+   -> pointer is an address
+   -> string: array of characters 
+la      $t0, string0
+
+lw -> load word -> 4 bytes
+   -> int -> 4 bytes 
+   -> loading an int 
+lw      $t1, num 
+
+lb -> load byte -> 1 byte
+   -> char -> 1 byte 
+   -> loading a byte
+lb      $t2, ch
+
 
 3. Loading from another register $t0 = $t1 
+int x = y;
 move    $t0, $t1
+
+
+
+SYSTEM CALLS 
+-> print int, read int, print char
+-> us calling a function that the OS runs 
+print_int()
+
+1. Load the correct code into $v0
+2. Load the correct arguments into $a0
+3. syscall 
+
