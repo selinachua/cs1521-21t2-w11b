@@ -10,6 +10,12 @@ int add(int x, int y, int z) {
     return sum; // $v0 = sum
 }
 
+read_int() {
+    ...
+    ...
+    return num; // $v0 = num
+}
+
 32 registers
 $zero   -> always has the value of 0
 $v0, v1 -> function return values 
@@ -64,6 +70,7 @@ move    $t0, $t1
 SYSTEM CALLS 
 -> print int, read int, print char
 -> us calling a function that the OS runs 
+
 print_int()
 
 1. Load the correct code into $v0

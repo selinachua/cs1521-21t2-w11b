@@ -59,3 +59,5 @@ string1:
 	.asciiz	"Reverse order:\n"
 num:
 	.word 	400
+ch:
+	.byte 	'a'
