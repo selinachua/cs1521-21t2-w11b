@@ -1,0 +1,35 @@
+2.
+a)
+2
+0
+b)
+0
+2
+c)
+"fork failed"
+
+6.
+a) Parent completes, and then child completes
+Hello
+Gan bei
+Goodbye 
+Prost 
+Goodbye 
+b) Child completes, and then parent completes 
+Hello
+Prost 
+Goodbye 
+Gan bei
+Goodbye 
+c) Parent runs halfway, child runs halfway, parent runs, child runs 
+Hello 
+Gan bei
+Prost 
+Goodbye 
+Goodbye 
+d) opposite of c) 
+Hello 
+Prost
+Gan bei
+Goodbye 
+Goodbye 
