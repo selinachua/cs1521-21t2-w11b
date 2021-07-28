@@ -1,0 +1,30 @@
+10000
+01000
+00100  |
+--------
+11100
+
+
+fopen(FilePath, "r")
+open(FilePath, O_RDONLY)
+
+fopen(FilePath, "a")
+open(FilePath, O_WRONLY | O_APPEND | O_CREAT)
+
+fopen(FilePath, "w")
+open(FilePath, O_WRONLY | O_CREAT | O_TRUNC)
+
+fopen(FilePath, "r+")
+open(FilePath, O_RDWR)
+
+fopen(FilePath, "w+")
+open(FilePath, O_RDWR, O_CREAT)
+
+FILE *fopen(char *pathname, char *mode) {
+    if (pathanem == NULL) {
+        ....
+    }
+    open(path, ...);
+    ...
+    return fp;
+}
