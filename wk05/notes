@@ -5,6 +5,7 @@ statically allocated memory = memory that is allocated at compile time
     e.g. int array[10] = {0}; OR int array[3] = {0, 1, 2};
 - strings 
 
+add.c --compile--> add.s -----> ./add
  __________
 |          |    
 | Memory   |   

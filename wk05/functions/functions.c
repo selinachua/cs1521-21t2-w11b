@@ -12,8 +12,8 @@ int main(void) {
 }
 
 int sum4(int a, int b, int c, int d) {
-    int e = sum2(a, b);
-    int f = sum2(c, d);
+    int e = sum2(a, b); 
+    int f = sum2(c, d); 
     return sum2(e, f);
 }
 

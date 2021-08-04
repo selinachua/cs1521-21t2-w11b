@@ -8,12 +8,21 @@ char flag[6][12] = {
     {'#', '#', '#', '#', '#', '.', '.', '#', '#', '#', '#', '#'},
     {'#', '#', '#', '#', '#', '.', '.', '#', '#', '#', '#', '#'}
 };
+// flag[0][3] -> offset = 3
+// flag[2][4] -> offset = 2 * 12 + 4 = 28
+// offset = row * N_COL + col
+// flag[3][3] -> offset = 3 * 12 + 3 = 39
+
+// *(flag + offset)
 
 int main(void) {
     for (int row = 0; row < 6; row++) {
-        for (int col = 0; col < 12; col++)
-            printf ("%c", flag[row][col]);
+        for (int col = 0; col < 12; col++) {
+            char ch = flag[row][col];
+            printf ("%c", ch);
+            // flag[row][col] = 10;
+        }
         printf ("\n");
     }
-
+    return 0;
 }
